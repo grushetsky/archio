@@ -5,7 +5,10 @@ package_name="archio"
 package_version="0.1"
 package_author="Toxic"
 
-# Get value based on version number
+# Select one of the input values based on version number
+# In case the version is less than 1.6.x the first parameter is echoed, otherwise, the second one.
+# $1 - first value
+# $2 - second value
 function select_based_on_version() {
     if [[ "$version" < "1.6" ]]; then
         echo "$1"
